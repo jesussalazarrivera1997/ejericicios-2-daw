@@ -1,7 +1,7 @@
 import {tresEnRaya} from './script2.js';
 import {entornoGrafico} from './script3.js'
 //console.log(cube(3)); 
-var tresenralla=new tresEnRaya();
+window.tresenralla=new tresEnRaya();
 //alert ('funciona')
 var entorno=new entornoGrafico(tresenralla); 
 console.log(tresenralla.casillas);
