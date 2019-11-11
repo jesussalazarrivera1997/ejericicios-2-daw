@@ -3,10 +3,10 @@ parte grafica
 */ 
 
 export class entornoGrafico{
-    constructor (){
-        this.nuevatabla(3,3);
+    constructor (juego){
+        this.nuevatabla(3,3,juego);
 
-    };
+    }; 
 
     
     nuevatabla(x,y){
@@ -16,7 +16,7 @@ export class entornoGrafico{
     for (let i=0;i<x;i++){
         tabla+="<tr>";
         for (let z=0;z<y;z++){
-            tabla+="<td id=\"idenº\""+cont1+""+cont2+"><button onclick=\"tresenralla.jugar("+cont1+","+cont2+")\"></td>";
+            tabla+="<td id=\"idenº\""+cont1+""+cont2+"><button onclick=\""+juego+".jugar("+cont1+","+cont2+")\"></td>";
             cont2++;
         }
         cont1++

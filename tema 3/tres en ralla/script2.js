@@ -3,7 +3,7 @@
 	return x * x * x;
   }
  export class tresEnRaya{
-	constructor(x=3,y=3){
+	constructor(x=3,y=3){ 
 	//	this.nuevatabla(x,y)
 	
 		this.casillas=this.crearCasilla(x,y);
