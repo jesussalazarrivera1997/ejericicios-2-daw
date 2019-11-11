@@ -1,0 +1,21 @@
+
+#elemnt{
+    padding: 20px;
+    border-style: solid;
+    border-width: 0 0 0 40px;
+    border-color: blue;
+    background-color: #F1EA5B;
+}
+#oculto{
+    display: inline;
+}
+#enlac{
+    border-style: solid;
+    border-width: 2px;
+    background-color: #A5E8FF;
+}
+#marco{
+    border-style: solid;
+    border-width: 2px;
+    background-color: #FBFF00
+}
