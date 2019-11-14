@@ -35,10 +35,13 @@ export class entornoGrafico {
             for (let z = 0; z < y; z++) {
             /*tabla+="<td ><button id=\"iden"+cont1+"q"+cont2+"\" onclick=\"entorno.jugada("+cont1+","+cont2+")\"></td>";*/  
                 var celda = document.createElement("td");
+                var att2 = document.createAttribute("onclick");
+                att2.value = "entorno.jugada("+cont1+","+cont2+")";
                 var att = document.createAttribute("id");
                 att.value = "iden"+cont1+""+cont2+"";
-                celda.setAttributeNode(att)
-                fila.appendChild(celda)
+                celda.setAttributeNode(att);
+                celda.setAttributeNode(att2);
+                fila.appendChild(celda);
                 cont2++;
             }
             tblBody.appendChild(fila)
