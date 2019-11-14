@@ -3,12 +3,13 @@ parte grafica
 */
 
 export class entornoGrafico {
-    constructor(juego) {
-        this.nuevatabla(3, 3, juego);
-
+    constructor(nomEnt,juego) {
+        this.nuevatabla(3, 3, nomEnt);
+        this.juego=juego;
     };
     jugada(x, y) {
-        var respuesta = tresenralla.jugar(x, y);
+        //dados los valores del elmento
+        var respuesta = this.juego.jugar(x, y);
         switch (respuesta[0]) {
             case 1: alert("juego terminado,prueba ma suerte la prosima vez"); break;
             case 2: alert("casilla no valida, lla en uso"); break;
@@ -23,7 +24,7 @@ export class entornoGrafico {
         }
     }
 
-    nuevatabla(x, y) {
+    nuevatabla(x, y, juego) {
         var tabla = document.createElement("TABLE")
         var tblBody = document.createElement("tbody");
         let cont1 = 0
@@ -36,7 +37,7 @@ export class entornoGrafico {
             /*tabla+="<td ><button id=\"iden"+cont1+"q"+cont2+"\" onclick=\"entorno.jugada("+cont1+","+cont2+")\"></td>";*/  
                 var celda = document.createElement("td");
                 var att2 = document.createAttribute("onclick");
-                att2.value = "entorno.jugada("+cont1+","+cont2+")";
+                att2.value = ""+juego+".jugada("+cont1+","+cont2+")";
                 var att = document.createAttribute("id");
                 att.value = "iden"+cont1+""+cont2+"";
                 celda.setAttributeNode(att);
