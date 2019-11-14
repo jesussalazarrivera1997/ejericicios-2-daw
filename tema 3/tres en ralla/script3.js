@@ -16,8 +16,8 @@ export class entornoGrafico{
             case 4 :    alert("!!!!!porfin ganaste contra esta estupida maquina¡¡¡¡¡");break;
         }
         if (respuesta[1]!=10){
-            document.getElementById("idenº"+respuesta[1][0]+""+respuesta[1][0]+"").button.style.backgroundColor.innerHTML="blue"
-            document.getElementById("idenº"+respuesta[2][0]+""+respuesta[2][0]+"").button.style.backgroundColor.innerHTML="red"
+            document.getElementById("idenº"+respuesta[1][0]+""+respuesta[1][0]+"").style.backgroundColor.innerHTML="blue"
+            document.getElementById("idenº"+respuesta[2][0]+""+respuesta[2][0]+"").style.backgroundColor.innerHTML="red"
         }
     }
     
@@ -28,7 +28,7 @@ export class entornoGrafico{
     for (let i=0;i<x;i++){
         tabla+="<tr>";
         for (let z=0;z<y;z++){
-            tabla+="<td id=\"idenº\""+cont1+""+cont2+"><button onclick=\"entorno.jugada("+cont1+","+cont2+")\"></td>";
+            tabla+="<td ><button id=\"idenº\""+cont1+""+cont2+" onclick=\"entorno.jugada("+cont1+","+cont2+")\"></td>";
             cont2++;
         }
         cont1++
