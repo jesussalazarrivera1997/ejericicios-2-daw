@@ -75,10 +75,8 @@ export class tresEnRaya {
 				return [2,10,0];
 			} else {
 				this.casillas[corx][xory] = 1;
-				if(this.comprobar()==4){
-					return [4,10,0];
-				};
-				if (this.contTiradas >= 4) {
+				
+				if (this.contTiradas >= 4&&this.comprobar()!=4) {
 					//	alert("juego terminado,prueba ma suerte la prosima vez");
 					return [1,10,0];
 				}
