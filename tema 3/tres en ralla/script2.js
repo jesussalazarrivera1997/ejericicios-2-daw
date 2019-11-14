@@ -65,7 +65,7 @@ export class tresEnRaya {
 		3 ==>juego perdido
 		4 ==>juego ganado  
 		*/
-		var siuno=corx,xory
+		var siuno=[corx,xory];
 		if (this.contTiradas >= 4) {
 			//	alert("juego terminado,prueba ma suerte la prosima vez");
 			return [1,10,0];
@@ -194,7 +194,7 @@ export class tresEnRaya {
 				}
 			}
 		}
-		return casillaIa;
+		return [casillaIa];
 	}
 
 }
