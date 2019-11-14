@@ -13,7 +13,7 @@ export class entornoGrafico{
             case 1 :	alert("juego terminado,prueba ma suerte la prosima vez");break;
             case 2 :	alert("casilla no valida, lla en uso");break;
             case 3 :	alert("juego terminado,prueba ma suerte la prosima vez");break;
-            case 4 :    	alert("!!!!!porfin ganaste contra esta estupida maquina¡¡¡¡¡");break;
+            case 4 :    alert("!!!!!porfin ganaste contra esta estupida maquina¡¡¡¡¡");break;
         }
     }
     
