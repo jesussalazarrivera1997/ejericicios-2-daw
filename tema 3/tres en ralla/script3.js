@@ -9,11 +9,15 @@ export class entornoGrafico{
     }; 
     jugada(x,y){
         var respuesta=tresenralla.jugar(x,y);
-        switch (respuesta){
+        switch (respuesta[0]){
             case 1 :	alert("juego terminado,prueba ma suerte la prosima vez");break;
             case 2 :	alert("casilla no valida, lla en uso");break;
-            case 3 :	alert("juego terminado,prueba ma suerte la prosima vez");break;
+            case 3 :	alert("jugador perdiste umillantemente contra la maquina");break;
             case 4 :    alert("!!!!!porfin ganaste contra esta estupida maquina¡¡¡¡¡");break;
+        }
+        if (respuesta[1]!=10){
+            document.getElementById("idenº"+respuesta[1][0]+""+respuesta[1][0]+"").button.style.backgroundColor.innerHTML="blue"
+            document.getElementById("idenº"+respuesta[2][0]+""+respuesta[2][0]+"").button.style.backgroundColor.innerHTML="red"
         }
     }
     
