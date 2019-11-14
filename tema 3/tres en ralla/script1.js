@@ -3,4 +3,4 @@ import {entornoGrafico} from './script3.js'
 //console.log(cube(3)); 
 window.tresenralla=new tresEnRaya();
 //alert ('funciona')
-window.entorno("entorno",tresenralla) = new entornoGrafico(tresenralla); 
+window.entorno = new entornoGrafico("entorno",tresenralla); 
