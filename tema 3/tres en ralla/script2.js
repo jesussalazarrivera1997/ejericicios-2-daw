@@ -109,76 +109,76 @@ export class tresEnRaya {
 		var si = 1
 		if (((this.casillas[0][0] == 1) && (this.casillas[0][1] == 1) && (this.casillas[0][2] == 0))) {
 			this.casillas[0][2] = 2;
-			casillaIa=0,2;
+			casillaIa=[0,2]; 
 		} else if (((this.casillas[0][0] == 0) && (this.casillas[0][1] == 1) && (this.casillas[0][2] == 1))) {
 			this.casillas[0][0] = 2;
-			casillaIa=0,0;
+			casillaIa=[0,0];
 		} else if (((this.casillas[0][0] == 1) && (this.casillas[0][1] == 0) && (this.casillas[0][2] == 1))) {
 			this.casillas[0][1] = 2;
-			casillaIa=0,1;
+			casillaIa=[0,1];
 		} else if (((this.casillas[1][0] == 1) && (this.casillas[1][1] == 1) && (this.casillas[1][2] == 0))) {
 			this.casillas[1][2] = 2;
-			casillaIa=1,2;
+			casillaIa=[1,2];
 		} else if (((this.casillas[1][0] == 0) && (this.casillas[1][1] == 1) && (this.casillas[1][2] == 1))) {
 			this.casillas[1][0] = 2;
-			casillaIa=1,0;
+			casillaIa=[1,0];
 		} else if (((this.casillas[1][0] == 1) && (this.casillas[1][1] == 0) && (this.casillas[1][2] == 1))) {
 			this.casillas[1][1] = 2;
-			casillaIa=1,1;
+			casillaIa=[1,1];
 		} else if (((this.casillas[2][0] == 1) && (this.casillas[2][1] == 1) && (this.casillas[2][2] == 0))) {
 			this.casillas[2][2] = 2;
-			casillaIa=2,2;
+			casillaIa=[2,2];
 		} else if (((this.casillas[2][0] == 0) && (this.casillas[2][1] == 1) && (this.casillas[2][2] == 1))) {
 			this.casillas[2][0] = 2;
-			casillaIa=2,0;
+			casillaIa=[2,0];
 		} else if (((this.casillas[2][0] == 1) && (this.casillas[2][1] == 0) && (this.casillas[2][2] == 1))) {
 			this.casillas[2][1] = 2;
-			casillaIa=2,1;
+			casillaIa=[2,1];
 		} else if (((this.casillas[0][0] == 1) && (this.casillas[1][0] == 1) && (this.casillas[2][0] == 0))) {
 			this.casillas[2][0] = 2;
-			casillaIa=2,0;
+			casillaIa=[2,0];
 		} else if (((this.casillas[0][0] == 1) && (this.casillas[1][0] == 0) && (this.casillas[2][0] == 1))) {
 			this.casillas[1][0] = 2;
-			casillaIa=1,0;
+			casillaIa=[1,0];
 		} else if (((this.casillas[0][0] == 0) && (this.casillas[1][0] == 1) && (this.casillas[2][0] == 1))) {
 			this.casillas[0][0] = 2;
-			casillaIa=0,0;
+			casillaIa=[0,0];
 		} else if (((this.casillas[0][1] == 0) && (this.casillas[1][1] == 1) && (this.casillas[2][1] == 1))) {
 			this.casillas[0][1] = 2;
-			casillaIa=0,1;
+			casillaIa=[0,1];
 		} else if (((this.casillas[0][1] == 1) && (this.casillas[1][1] == 0) && (this.casillas[2][1] == 1))) {
 			this.casillas[1][1] = 2;
-			casillaIa=1,1;
+			casillaIa=[1,1];
 		} else if (((this.casillas[0][1] == 1) && (this.casillas[1][1] == 1) && (this.casillas[2][1] == 0))) {
 			this.casillas[2][1] = 2;
-			casillaIa=2,1;
+			casillaIa=[2,1];
 		} else if (((this.casillas[0][2] == 1) && (this.casillas[1][2] == 0) && (this.casillas[2][2] == 1))) {
 			this.casillas[1][2] = 2;
-			casillaIa=1,2;
+			casillaIa=[1,2];
 		} else if (((this.casillas[0][2] == 0) && (this.casillas[1][2] == 1) && (this.casillas[2][2] == 1))) {
 			this.casillas[0][2] = 2;
-			casillaIa=0,2;
+			casillaIa=[0,2];
 		} else if (((this.casillas[0][2] == 1) && (this.casillas[1][2] == 1) && (this.casillas[2][2] == 0))) {
 			this.casillas[2][2] = 2;
-			casillaIa=2,2;
+			casillaIa=[2,2];
 		} else if ((this.casillas[0][0] == 0) && (this.casillas[1][1] == 1) && (this.casillas[2][2] == 1)) {
 			this.casillas[0][0] = 2;
-			casillaIa=0,0;
+			casillaIa=[0,0];
 		} else if ((this.casillas[0][0] == 1) && (this.casillas[1][1] == 0) && (this.casillas[2][2] == 1)) {
 			this.casillas[1][1] = 2;
-			casillaIa=1,1;
+			casillaIa=[1,1];
 		} else if ((this.casillas[0][0] == 1) && (this.casillas[1][1] == 1) && (this.casillas[2][2] == 0)) {
 			this.casillas[2][2] = 2;
-			casillaIa=2,2;
+			casillaIa=[2,2];
 		} else if ((this.casillas[2][0] == 0) && (this.casillas[1][1] == 1) && (this.casillas[0][2] == 1)) {
 			this.casillas[2][0] = 2;
-			casillaIa=2,0;
+			casillaIa=[2,0];
 		} else if ((this.casillas[2][0] == 1) && (this.casillas[1][1] == 0) && (this.casillas[0][2] == 1)) {
 			this.casillas[1][1] = 2;
-			casillaIa=1,1;
+			casillaIa=[1,1];
 		} else if ((this.casillas[2][0] == 1) && (this.casillas[1][1] == 1) && (this.casillas[0][2] == 0)) {
 			this.casillas[0][2] = 2;
-			casillaIa=0,2;
+			casillaIa=[0,2];
 		} else {
 			while (si > 0) {
 				// si no encuentra una posicion dada la maquina asigna una aleatoriamente suempre
@@ -190,7 +190,7 @@ export class tresEnRaya {
 				if (this.casillas[cor1][cor2] == 0) {
 					si = 0;
 					this.casillas[cor1][cor2] = 2;
-					casillaIa=cor1,cor2;
+					casillaIa=[cor1,cor2];
 				}
 			}
 		}
