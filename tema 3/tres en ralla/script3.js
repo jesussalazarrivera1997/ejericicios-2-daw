@@ -16,9 +16,10 @@ export class entornoGrafico{
             case 4 :    alert("!!!!!porfin ganaste contra esta estupida maquina¡¡¡¡¡");break;
         }
         if (respuesta[1]!=10){
-            console.log(respuesta)
-            document.getElementById("iden"+respuesta[1][0]+""+respuesta[1][0]+"").style.backgroundColor="blue";
-            document.getElementById("iden"+respuesta[2][0]+""+respuesta[2][0]+"").style.backgroundColor="red";
+            console.log(respuesta);
+            console.log(respuesta[1,0],respuesta[1,1])
+            document.getElementById("iden"+respuesta[1][0]+""+respuesta[1][1]+"").style.backgroundColor="blue";
+            document.getElementById("iden"+respuesta[2][0]+""+respuesta[2][1]+"").style.backgroundColor="red";
         }
     }
     
