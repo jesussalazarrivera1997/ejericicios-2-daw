@@ -194,7 +194,7 @@ export class tresEnRaya {
 				}
 			}
 		}
-		return [casillaIa];
+		return casillaIa;
 	}
 
 }
