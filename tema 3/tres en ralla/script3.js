@@ -47,7 +47,7 @@ export class entornoGrafico {
             /* tabla+="</tr>";*/
         }
         tabla.appendChild(tblBody);
-        document.getElementById("jego").appendChild(tabla)
+        document.getElementById("juego").appendChild(tabla)
         /*
         tabla += "</table>"
         document.getElementById("juego").innerHTML = tabla;*/
