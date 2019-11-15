@@ -10,13 +10,15 @@ export class entornoGrafico {
     jugada(x, y) {
         //dados los valores del elmento
         var respuesta = this.juego.jugar(x, y);
-        
+        //colorea las casillas azul para el jugador , rojo maquina
         if (respuesta[1] != 10) {
             console.log(respuesta);
             console.log(respuesta[1, 0], respuesta[1, 1])
             document.getElementById("iden" + respuesta[1][0] + "" + respuesta[1][1] + "").style.backgroundColor = "blue";
             document.getElementById("iden" + respuesta[2][0] + "" + respuesta[2][1] + "").style.backgroundColor = "red";
         }
+        //segun la respuesta de la casilla 1 se debuelben valores para 
+        //realizar varias acciones 
         switch (respuesta[0]) {
             case 1: alert("juego terminado,prueba ma suerte la prosima vez"); break;
             case 2: alert("casilla no valida, lla en uso"); break;
@@ -26,6 +28,7 @@ export class entornoGrafico {
     }
 
     nuevatabla(x, y, juego) {
+        //crea la tabla de juego mediante dom 
         var tabla = document.createElement("TABLE")
         var tblBody = document.createElement("tbody");
         let cont1 = 0
