@@ -12,8 +12,8 @@ export class entornoGrafico {
         var respuesta = this.juego.jugar(x, y);
         //colorea las casillas azul para el jugador , rojo maquina
         if (respuesta[1] != 10) {
-            console.log(respuesta);
-            console.log(respuesta[1, 0], respuesta[1, 1])
+           // console.log(respuesta);
+           //console.log(respuesta[1, 0], respuesta[1, 1])
             document.getElementById("iden" + respuesta[1][0] + "" + respuesta[1][1] + "").style.backgroundColor = "blue";
             document.getElementById("iden" + respuesta[2][0] + "" + respuesta[2][1] + "").style.backgroundColor = "red";
         }

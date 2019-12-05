@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+    const xhttp = new XMLHttpRequest()
+            xhttp.open("GET", "./datos.json", true);
+            xhttp.send();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+
+                    datos = JSON.parse(this.responseText);
+                    var partido = datos[0]
+                    console.log(datos)
+                    google.charts.load("current", { packages: ['corechart'] });
+
+                    google.charts.setOnLoadCallback(drawChart);
+                    function drawChart() {
+                        var data = google.visualization.arrayToDataTable([
+                            ["Partido", "Diputados", { role: "style" }],
+                            ['PSOE', partido.PSOE, "red"],
+                            ['PP', partido.PP, "blue"],
+                            ['VOX', partido.VOX, "green"],
+                            ['PODEMOS', partido.PODEMOS, "purple"],
+                            ['ERC', partido.ERC, "brown"],
+                            ['EAJ-PNV', partido.PNV, "orange"],
+                            ['EH BILDU', partido.EHBILDU, "black"],
+                            ['OTROS', partido.OTROS, "silver"]
+                        ]);
+
+                        var view = new google.visualization.DataView(data);
+                        view.setColumns([0, 1,
+                            {
+                                calc: "stringify",
+                                sourceColumn: 1,
+                                type: "string",
+                                role: "annotation"
+                            },
+                            2]);
+
+                        var options = {
+                            title: "Congresp de los diputados en españa",
+                            width: 600,
+                            height: 400,
+                            bar: { groupWidth: "95%" },
+                            legend: { position: "none" },
+                            animation: {
+                                duration: 1000,
+                                easing: 'out',
+                            }
+                        };
+                        var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+                        chart.draw(view, options);
+                    }
+
+                }
+            }
+        function dibujar() {
+            const xhttp = new XMLHttpRequest()
+            xhttp.open("GET", "./datos.json", true);
+            xhttp.send();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+
+                    datos = JSON.parse(this.responseText);
+                    var partido = datos[0]
+                    console.log(datos)
+                    function drawChart() {
+                        var data = google.visualization.arrayToDataTable([
+                            ["Partido", "Diputados", { role: "style" }],
+                            ['PSOE', partido.PSOE, "red"],
+                            ['PP', partido.PP, "blue"],
+                            ['VOX', partido.VOX, "green"],
+                            ['PODEMOS', partido.PODEMOS, "purple"],
+                            ['ERC', partido.ERC, "brown"],
+                            ['EAJ-PNV', partido.PNV, "orange"],
+                            ['EH BILDU', partido.EHBILDU, "black"],
+                            ['OTROS', partido.OTROS, "silver"]
+                        ]);
+                        chart.draw(view, options);
+                    }
+
+                }
+            }
+        }
+        setInterval(dibujar, 10000)
+
+    // Callback that creates and populates a data table,
+    // instantiates the pie chart, passes in the data and
+    // draws it.
+
+    </script>
+</head>
+
+<body>
+    <!--Div that will hold the pie chart-->
+    <div id="columnchart_values" style="width: 900px; height: 300px;"></div>
+</body>
+
+</html>

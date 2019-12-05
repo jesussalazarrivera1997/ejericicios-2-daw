@@ -1,0 +1,60 @@
+<head>
+
+</head>
+
+<body>
+    <script type="text/javascript" async>
+        /*3
+        var contador=0
+        
+        function mas(){
+            contador++
+            document.getElementById("contador").innerHTML=contador
+        }
+        function crearGatitos(n){
+            for(let i=0;i<=n;i++){
+                var imagen = document.createElement("img");
+                imagen.setAttribute("src","descarga.jpg")
+                imagen.setAttribute("height",100);
+                imagen.setAttribute("width",100);
+                imagen.setAttribute("id",i);
+                imagen.setAttribute('onclick',"cuantosGtitos(this.id)")
+                var  contador = document.createElement("div")
+                contador.setAttribute("id",i+"id")
+                contador.setAttribute("value",0)
+                document.body.appendChild(imagen);
+                document.body.appendChild(contador);
+            }
+        }
+        function cuantosGtitos(id){
+            
+            var cuantos = document.getElementById(id+"id")
+            let x = parseInt(cuantos.getAttribute("value"))
+            cuantos.setAttribute("value",x+1);
+            cuantos.innerHTML=x+1
+        }
+        */
+        var gatitos = [["descarga.jpg", "bola", 0], ["descarga.jpg", "chispas", 0]];
+        function crearGatitos(n) {
+            var talba = document.createElement("table");
+            for (let i = 0; i <= gatitos.length; i++) {
+                var tr = document.createElement("tr")
+                tr.setAttribute("id", i);
+                tr.setAttribute('onclick', "cuantosGtitos(this.id)")
+                tr.innerHTML=gatitos[i][1]
+            }
+            var contador = document.createElement("div")
+            contador.setAttribute("id", "tabla")
+            document.body.appendChild(tabla);
+            document.body.appendChild(contador);
+        }
+        function cuantosGtitos(id) {
+            var cuantos = document.getElementById("id")
+            
+            let x = parseInt(cuantos[id].getAttribute("value"))
+            cuantos.setAttribute("value", x + 1);
+            cuantos.innerHTML = x + 1
+        }
+        crearGatitos(3)
+    </script>
+</body>
